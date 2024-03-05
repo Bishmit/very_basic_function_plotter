@@ -4,7 +4,6 @@
 #define WIDTH 1000
 #define HEIGHT 500
 
-// Function definition (sine function)
 float y(double x) {
     return 1.0f / (1.0f + std::exp(-x)); //sigmoid function 
     // for now you can only see the function which have one y of f(x) i.e for function like (x^2 + y^2 -1)^3 = x^2.y^3 it won't work since y has power 3 and it overloads in function 
@@ -12,7 +11,7 @@ float y(double x) {
 }
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Sine Function Plotter");
+    sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Function Plotter");
     window.setFramerateLimit(60);
 
     sf::VertexArray graph(sf::LineStrip);
@@ -86,7 +85,5 @@ int main() {
 
         window.display();
     }
-
-
     return 0;
 }
